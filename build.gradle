@@ -29,10 +29,10 @@ ext {
 
 bootJar {
     baseName = 'polling-service'
-//    version =  '0.1.0-${git.head().abbreviatedId}'
-    version = "${getVersionName()}-${getGitHash()}-${git.head().abbreviatedId}"
-
+    version = "${getVersionName()}"
 }
+
+//-${getGitHash()}
 
 def getGitHash() {
     def stdout = new ByteArrayOutputStream()
