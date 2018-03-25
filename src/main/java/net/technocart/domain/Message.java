@@ -1,11 +1,11 @@
-package hello;
+package net.technocart.domain;
 
-public class Greeting {
+public class Message {
 
     private final long id;
     private final String content;
 
-    public Greeting(long id, String content) {
+    public Message(long id, String content) {
         this.id = id;
         this.content = content;
     }
