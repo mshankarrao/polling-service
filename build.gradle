@@ -41,3 +41,6 @@ def getVersionName(){
     return stdout.toString().trim()
 }
 
+compileJava.doFirst { println 'This will be invoked right after the compileJava task is done'}
+
+
