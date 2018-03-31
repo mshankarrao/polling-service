@@ -7,8 +7,6 @@ buildscript {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:2.0.0.RELEASE")
     }
 }
-
-
 group 'net.technocart'
 apply plugin: 'java'
 apply plugin: 'eclipse'
