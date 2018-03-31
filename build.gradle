@@ -8,8 +8,8 @@ buildscript {
     }
 }
 
-group 'net.technocart'
 
+group 'net.technocart'
 apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'idea'
