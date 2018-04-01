@@ -1,5 +1,6 @@
 package net.technocart.controller;
 
+import java.util.Optional;
 import java.util.concurrent.atomic.AtomicLong;
 
 import net.technocart.domain.Coordinates;
@@ -30,8 +31,8 @@ public class PollingController {
 
 
     @RequestMapping(value = "/submit", method = RequestMethod.POST)
-    public String saveCoordinates(@RequestBody Coordinates coordinates) {
-        return pollingService.log(coordinates);
+    public Optional<Coordinates> saveCoordinates(@RequestBody Coordinates coordinates) {
+        return pollingService.saveCoordinates(coordinates);
     }
 
 }
