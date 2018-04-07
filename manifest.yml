@@ -1,9 +1,11 @@
----
 applications:
 - name: polling-service
-  memory: 1G
+  buildpack: java_buildpack
+  disk_quota: 512M
   instances: 1
-  path: build/libs/
-  env:
-    JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 9.0.+ } }'
-    JAVA_OPTS: -Xms256M
+  memory: 1G
+  routes:
+  - route: polling-service.local.pcfdev.io
+  services:
+  - polling-mysql
+  stack: cflinuxfs2
